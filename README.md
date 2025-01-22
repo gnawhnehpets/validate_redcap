@@ -4,7 +4,7 @@ This simple app leverages the REDCap API to validate the metadata (aka data dict
 ## Setup
 In order to run the app, you will need to create a `.env` file in the root directory of the project. The `.env` file should contain the `API_URL` from Control Center and the `API_TOKEN` generated at the project level.
 
-### Example `.env` File
+#### example `.env` 
 ```
 API_URL=https://redcap.yourinstitution.edu/api/
 API_TOKEN=your-project-specific-token
