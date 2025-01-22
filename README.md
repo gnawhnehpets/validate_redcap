@@ -4,8 +4,14 @@ This simple app leverages the REDCap API to validate the metadata (aka data dict
 ## Setup
 In order to run the app, you will need to create a `.env` file in the root directory of the project. The `.env` file should contain the `API_URL` from Control Center and the `API_TOKEN` generated at the project level.
 
+### Example `.env` File
+```
+API_URL=https://redcap.yourinstitution.edu/api/
+API_TOKEN=your-project-specific-token
+```
+
 ## Running the app
-First, setup and activate virtual environment
+First, set up and activate virtual environment
 ```
 python3 -m venv .venv   
 source .venv/bin/activate    
@@ -15,7 +21,7 @@ pip install -r requirements.txt
 
 Then, run the app with the following command:
 ```
-python3 app.py /path/to/redcap_dd.csv
+python3 validate_redcap_dd.py /path/to/redcap_dd.csv
 ```
 
 ## Result
