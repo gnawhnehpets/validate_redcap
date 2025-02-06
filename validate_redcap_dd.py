@@ -10,16 +10,16 @@ api_url = os.getenv("API_URL")
 api_token = os.getenv("API_TOKEN")
 
 if len(sys.argv) < 2:
-    print("Usage: python script.py <metadata_file_path>")
+    print("Usage: python script.py <path_to_redcap_csv>")
     sys.exit(1)
 
-metadata_file_path = sys.argv[1]
+path_to_redcap_csv = sys.argv[1]
 
 try:
-    with open(metadata_file_path, "r") as file:
+    with open(path_to_redcap_csv, "r") as file:
         metadata_content = file.read()
 except FileNotFoundError:
-    print(f"Error: File not found at {metadata_file_path}")
+    print(f"Error: File not found at {path_to_redcap_csv}")
     sys.exit(1)
 except Exception as e:
     print(f"Error reading file: {e}")
